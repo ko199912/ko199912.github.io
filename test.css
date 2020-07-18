@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+@import url('https://fonts.googleapis.com/css?family=Sawarabi+Mincho');
+@media screen and (min-width:0px){
+  body {
+    margin: 0;
+    background-image: url(images/background_wrapper.jpg);
+    background-color:rgba(255,255,255,0.7);
+    background-blend-mode:lighten;
+    background-attachment: fixed;
+}
+
+.wrapper{
+    font-family: serif;
+    font-size: 30px;
+    min-height: 120vh;
+    padding-top: 120px;
+    margin: 0 5%;
+    position: relative;/*footer参照位置*/
+    padding-bottom: 60px;/*ここで指定してるのはfooterの範囲を指定している*/
+    box-sizing: border-box;/*これを指定しないと100vh+120pxされているためこれで(100vh+120px)=100vhになるよう調整*/
+}
+#heder_custum {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-blend-mode:lighten;
+    box-shadow: 0 10px 25px 0 rgba(255, 255, 255, 0.9);
+    background: linear-gradient(25deg, rgba(250, 172, 172, 0.5), rgba(157, 172, 255, 0.5)),url(images/background_heder.jpg);
+    background-size: 100% 100%;
+    position: fixed;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+img {
+    width: 100px;
+}
+.sub_name{
+  opacity: 0.8;
+  margin-left: 5%;
+}
+.main_name{
+  display: inline-block;
+  font-weight: 900;
+  border-bottom: dotted 2px #333;
+  margin-left: 3%;
+}
+.header_list{
+  display: flex;
+  align-items: center;
+}
+.button {
+  min-width: 100px;
+  height: 70px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+  padding: 10px 15px 0 0;
+  margin: 0 10px 0 0 ;
+}
+.button::before,
+.button::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.button,
+.button::before,
+.button::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+
+}
+.button {
+
+  position: relative;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+}
+.button span {
+  font-family: 'Sawarabi Mincho', sans-serif;
+  background-color: rgba(255, 255, 255,0.7);
+  font-weight: 800;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  border: 4px solid rgba(46, 46, 46, 0.7);
+  text-align: center;
+  line-height: 56px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  pointer-events: none;
+}
+.button span:nth-child(1) {
+  color: #333;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -30px;
+  -moz-transform-origin: 50% 50% -30px;
+  transform-origin: 50% 50% -30px;  
+  border-radius: 30px;
+}
+.button span:nth-child(2) {
+  color: #333;
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -30px;
+  -moz-transform-origin: 50% 50% -30px;
+  transform-origin: 50% 50% -30px;
+  border-radius: 10px;
+
+}
+.button:hover span:nth-child(1) {
+  color:rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0 ,0.5);
+  text-shadow:2px 1px 1px #ff0000;
+  border: 4px solid rgba(255, 255, 255,0.7);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  z-index: 5;
+  border-radius: 10px;
+
+}
+.button:hover span:nth-child(2) {
+  color:rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0 ,0.1);
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  border-radius: 30px;
+}
+main h1 {
+  position: relative;
+  font-family: 'Sawarabi Mincho', sans-serif;
+  font-size: 80px;
+  text-shadow:2px 2px 3px #f51818;
+  text-align: center;
+  background-color: rgba(179, 255, 0,0.3);
+}
+main h1:after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: solid 10px rgba(179, 255, 0);
+}
+main h1:before{
+  position: absolute;
+  content: " ";
+  bottom: 0;
+  right: 0;
+  width: 0;
+  border-bottom: 35px solid  rgba(179, 255, 0);
+  border-left: 35px solid transparent;
+}
+.title {
+  background: linear-gradient( rgb(179, 227, 255,0),rgba(255, 9, 9,0) 90%, rgba(179, 227, 255,0)),
+  url(images/renga.jpg);
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  box-shadow: inset 0 0 0 9px rgba(0, 0, 0, 0.8);
+  position: relative;
+  border-radius: 9px;
+}
+
+.title .title_main {
+  font-family: 'Sawarabi Mincho', sans-serif;
+  font-size: 80px;
+  text-shadow:2px 2px 1px rgba(255, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.9);
+  border: none;
+  background: none;
+  
+}
+.title .title_main::after,.title .title_main::before{
+  border: none;
+}
+main .about {
+  border-radius: 10px;
+  margin-bottom: 10%;
+  background-color: rgb(240, 239, 255);
+  border: 3px solid #333;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(0,0,0,0.2));
+}
+main .about h2{
+  position: relative;
+  border-left: 20px solid rgba(179, 255, 0);
+  background-color: rgba(179, 255, 0, 0.1);
+}
+main .about h2::before{
+  content: " ";
+  position: absolute;
+  bottom: -1rem;
+  width: 100%;
+  border-bottom: 2px dotted #333;
+}
+main div:nth-child(5){
+  margin-bottom: 200px;
+}
+main .profile dt{
+  float: left;
+}
+main dt::after{
+  content: "："
+}
+.career dl{
+  font-weight: 600;
+}
+
+.skill_main table {
+  width:100%;
+  background-color: rgb(0, 0, 0);
+  border: 3px solid rgba(0, 0, 0);
+  border-radius: 5px;
+
+}
+.skill_sub td{
+  background-color: rgb(240, 239, 255);
+  text-align: center;
+  border-radius: 5px;
+}
+.works{
+ text-align: center;
+ background-color:rgba(0, 0, 0 ,0.1);
+}
+footer{
+  width: 100%;
+  color: rgba(255, green, blue, alpha);
+  background-color: #111;
+  text-align: center;
+  padding: 30px 0;
+}
+}
+@media screen and (min-width:1000px){
+  #heder_custum {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-blend-mode:lighten;
+    box-shadow: 0 10px 25px 0 rgba(255, 255, 255, 0.9);
+    background: linear-gradient(25deg, rgba(250, 172, 172, 0.5), rgba(157, 172, 255, 0.5)),url(images/background_heder.jpg);
+    background-size: 100% 100%;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.header_list{
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  min-width: 200px;
+  height: 70px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+  padding: 10px 15px 0 0;
+  margin: 0 10px 0 0 ;
+}
+.title .title_main {
+  font-family: 'Sawarabi Mincho', sans-serif;
+  font-size: 80px;
+  text-shadow:2px 2px 1px rgba(255, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.5)
+}
+}
